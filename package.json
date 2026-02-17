@@ -1,0 +1,21 @@
+{
+  "name": "@cheatron/cheatron-native-mock-koffi",
+  "version": "1.0.0",
+  "description": "Pure JavaScript mock implementation of koffi for testing native modules without compilation",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "@types/bun": "latest"
+  }
+}
