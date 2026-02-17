@@ -31,10 +31,20 @@
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint \"{src,tests}/**/*.{js,ts,jsx,tsx}\" --cache",
+    "lint:fix": "eslint \"{src,tests}/**/*.{js,ts,jsx,tsx}\" --fix",
+    "format": "prettier --write \"{src,tests}/**/*.{js,ts,jsx,tsx,css,md,json}\"",
+    "format:check": "prettier --check \"{src,tests}/**/*.{js,ts,jsx,tsx,css,md,json}\""
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/bun": "latest",
+    "eslint": "^10.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.3.0",
+    "prettier": "^3.8.1",
     "typescript": "^5",
-    "@types/bun": "latest"
+    "typescript-eslint": "^8.56.0"
   }
 }
